@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿#if ANDROID
+using Android.App;
+#endif
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace OpenWidgetBoard;
 
@@ -14,6 +18,23 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
+
+        builder.ConfigureLifecycleEvents(events =>
+        {
+            #if ANDROID
+
+            events.AddAndroid(lifecycle =>
+            {
+                lifecycle.OnStart((activity) => OnStart(activity));
+            });
+
+            static void OnStart(Activity activity)
+            {
+                Console.WriteLine("Android app started now");
+            }
+            
+            #endif
+        });
 
 #if DEBUG
         builder.Logging.AddDebug();

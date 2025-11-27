@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpenWidgetBoard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+60414bef8b619c1fa4e59833f13da37e1ceecdcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpenWidgetBoard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpenWidgetBoard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
